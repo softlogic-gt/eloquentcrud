@@ -10,7 +10,7 @@ class EloquentCrudServiceProvider extends ServiceProvider
 
     public function boot()
     {
-        $registrar = new \Softlogic\EloquentCrud\ResourceRegistrar($this->app['router']);
+        $registrar = new \SoftlogicGt\EloquentCrud\ResourceRegistrar($this->app['router']);
         $this->app->bind('Illuminate\Routing\ResourceRegistrar', function () use ($registrar) {
             return $registrar;
         });
