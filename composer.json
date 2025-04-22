@@ -1,0 +1,27 @@
+{
+    "name": "softlogic-gt/eloquentcrud",
+    "description": "Eloquent CRUD implementation",
+    "authors": [
+        {
+            "name": "Softlogic",
+            "email": "software@softlogic.com.gt"
+        }
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "classmap": [],
+        "psr-4": {
+            "SoftlogicGt\\EloquentCrud\\": "src"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoftlogicGt\\EloquentCrud\\EloquentCrudServiceProvider"
+            ]
+        }
+    }
+}

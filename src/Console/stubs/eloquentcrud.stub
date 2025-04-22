@@ -1,0 +1,24 @@
+<?php
+namespace DummyNamespace;
+
+use SoftlogicGt\EloquentCrud\EloquentCrudController;
+use Csgt\Cancerbero\Facades\Cancerbero;
+use Illuminate\Http\Request;
+
+class DummyClass extends EloquentCrudController
+{
+    public function setup(Request $request)
+    {
+        $query = TestModel::query()
+            ->select('id', 'name');
+
+        $this->setQuery($query);
+        $this->setExtraButton([
+            'title'  => 'Orders',
+            'url'    => '/orders/orders/{id}',
+            'icon'   => 'fa fa-shopping-cart',
+            'target' => '_blank',
+        ]);
+        // $this->setPermissions(Cancerbero::crudPermissions('module'));
+    }
+}
